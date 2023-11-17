@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #131d28;
+  padding: 10px;
+  color: orange;
+  overflow: hidden;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  margin-bottom: 10px;
+  position: absolute;
+  animation: slide-up 2s ease-in-out forwards;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 30px;
+  opacity: 1;
+}
+
+img {
+  max-width: 30%;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity 1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  left: 15%;
+  top: -10%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  object-fit: cover;
+}
+
+h1.animation-finished + img {
+  display: block;
+}
+
+@media screen and (min-width: 1920px) {
+  h1 {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  img {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 50px;
+  }
+}
